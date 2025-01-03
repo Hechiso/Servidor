@@ -1,0 +1,14 @@
+# g++
+
+sudo apt install g++
+
+
+# librerias para el desarrollo con ffmpeg ,
+
+sudo apt-get install ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libavdevice-dev
+
+
+#librerias boos::asio
+
+sudo apt install libboost-all-dev
+

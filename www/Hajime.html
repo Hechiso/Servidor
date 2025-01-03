@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Reprocutor Anime</title>
+   <link rel="stylesheet" type="text/css" href="css/Tate.css">
+</head>
+
+<body>
+  
+
+<!-- -------------------------------------------     Datos de anime    ---------------------------------------------------------->
+     <div class="Data">
+      
+         <img class="descripcion" src="PortadasAnime/Hajime.jpg"></img> 
+         <div class="datosAnime">
+            
+            <h2>Hajime No Ippo</h2>
+	
+            <article>La Historia se centra en la Vida de Ippo Makanaochi 
+		    el cual sufre de acoso por parte de sus compañero de escuela ,
+		    hasta que por azares del destino conoce a su salvador Mamoru Takamura 
+	    </article>
+
+            <ul>
+	        <li>Genero:   Shonen</li>
+	        <li>Capitulos:   45</li>
+	        <li>Idioma:   Japones</li>
+	        <li>Subtitulos:    Español</li>
+             </ul>
+
+	 </div>
+    </div> <!-- Data -->
+    
+<!-- -----------------------------------------     mosaico de capitulos    ------------------------------------------------------->
+
+    <div class="capitulos">
+	    
+        <img src="PortadasAnime/Hajime-Portada.jpeg" alt="Imagen" id="miImagen" onclick="alternarVideo('miVideo')">
+        <div class="Superpuesto">
+               <p class="Capitulo1">Capitulo 1</p>
+        </div>
+
+
+        <img src="PortadasAnime/Hajime-Portada.jpeg" alt="Imagen" id="miImagen" onclick="alternarVideo('mianime')">
+        <div class="Superpuesto">
+               <p class="Capitulo2">Capitulo 2</p>
+           </div>
+
+
+
+        <video id="miVideo" controls style="display: none;">
+            <source src="Anime/Hajime.webm" type="video/webm">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <video id="mianime" controls style="display: none;">
+            <source src="Anime/Hajime1.webm" type="video/webm">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+             <script>
+                  function alternarVideo(videoId) {
+                       var video = document.getElementById(videoId);
+
+                       // Si el video está oculto, lo muestra y reproduce
+                       if (video.style.display === 'none') {
+                          video.style.display = 'block';
+                          video.play();
+
+                          // Entra en modo de pantalla completa al reproducir el video
+                          if (video.requestFullscreen) {
+                              video.requestFullscreen();
+                          } else if (video.mozRequestFullScreen) { /* Firefox */
+                              video.mozRequestFullScreen();
+                          } else if (video.webkitRequestFullscreen) { /* Chrome, Safari y Edge */
+                              video.webkitRequestFullscreen();
+                          } else if (video.msRequestFullscreen) { /* IE/Edge */
+                              video.msRequestFullscreen();
+                          }
+                          } else {
+                          // Si el video está visible, lo oculta y detiene
+                              video.style.display = 'none';
+                              video.pause();
+                          }
+
+             // Detecta el cambio de estado de pantalla completa
+             document.onfullscreenchange = function() {
+                  if (!document.fullscreenElement) {
+                  // Sale del modo de pantalla completa, oculta el video
+                      video.style.display = 'none';
+                      video.pause();
+                   }
+             };
+          }
+              </script>
+
+
+    </div>
+
+
+</body>
+</html>

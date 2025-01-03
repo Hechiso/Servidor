@@ -1,0 +1,132 @@
+/* Estilo general */
+body {
+    background-color: #111;	
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    height: 87.5vh; 
+}
+
+.banner {
+  background-color: #333;	
+  position: relative; /* Habilita la posición relativa para los elementos internos */
+  padding: 10px;
+}
+
+.banner h3 {
+  margin: 0;
+  display: flex; /* Activa el modelo de caja flex para distribuir los elementos */
+  justify-content: space-between; /* Coloca los elementos en los extremos */
+  align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.banner h3 a img {
+  display: block; /* Asegura que la imagen respete las reglas de layout */
+}
+
+.banner h3 a{
+  display: none;
+}
+
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('wpfondo.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 100%; /* Asegúrate de dar un ancho al contenedor */
+  height: 100%; /* Define una altura, aquí ocupa toda la pantalla */
+  display: 1; 
+}
+
+.menu ul {
+
+  list-style: none; /* Elimina los puntos de lista predeterminados */
+  padding: 0;       /* Quita el padding del contenedor */
+  margin: 0;        /* Quita el margen del contenedor */
+  display: flex;    /* Organiza los elementos en línea horizontal */
+ /* justify-content: center;  Centra el menú horizontalmente */
+  
+}
+
+.menu li {
+  margin: 0 15px; /* Espaciado entre elementos del menú */
+}
+
+.menu a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #fff;          /* Color del texto */
+  font-weight: bold;    /* Negrita */
+  padding: 10px 20px;   /* Espaciado interno del enlace */
+  background-color: #777; /* Fondo del enlace */
+/*  border-radius: 5px;    Bordes redondeados */
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.menu a:hover {
+  background-color: #555; /* Cambia el color al pasar el cursor */
+}
+
+
+.Descripcion{
+    width: 35%;
+    font-size: 22px;
+    margin-top: 5%;
+    color: #333;
+}
+
+p{
+   margin: 0;
+}
+
+.Referencia{
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos en los extremos */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0; /* Mantén un relleno moderado */
+  position: relative; /* Cambia esto a fixed si deseas que siempre esté visible */
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que padding no altere el ancho total */
+}
+/*-------------------------------------------------------------------------------------*/
+
+@media (max-width: 375px){
+   body{
+       background-color: #999;
+       margin: 0;
+   }
+   .banner h3 a{
+       display: flex;
+   }
+   .banner h3 a img {
+       display: block; /* Asegura que la imagen respete las reglas de layout */
+       width: 40px;
+       height: 40px;
+    }
+
+    .main{
+       display: flex;
+    }
+  .menu{
+     display: none;
+  }
+  
+  .parrafo{
+   margin-top: 5%;
+  }
+
+  .Descripcion{
+     margin-top: 0;
+     width: 100%;    
+     color: #555;
+  }
+
+   
+}/*fin*/
+
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pelis</title>
+    <link rel="stylesheet" type="text/css" href="css/pelis.css">
+</head>
+
+<body>
+   
+   <div class="mosaico">
+	   
+       <img src="PortadasPelis/dementes.jpg" alt="Imagen" id="dementes" onclick="alternarVideo('VideoDementes')">
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+       <img src="PortadasPelis/dementes.jpg"></img>
+
+<!-- ------------------------   videos  --------------------- -->
+
+       <video id="VideoDementes" controls style="display: none;"
+         <source src="Peliculas/dementes.webm" type="video/webm">
+         Tu navegador no soporta el elemento de video.
+       </video>
+
+
+
+
+<!-- ----------------------  scritp ---------------------------->
+
+             <script>
+                  function alternarVideo(videoId) {
+                       var video = document.getElementById(videoId);
+
+                       // Si el video está oculto, lo muestra y reproduce
+                       if (video.style.display === 'none') {
+                          video.style.display = 'block';
+                          video.play();
+
+                          // Entra en modo de pantalla completa al reproducir el video
+                          if (video.requestFullscreen) {
+                              video.requestFullscreen();
+                          } else if (video.mozRequestFullScreen) { /* Firefox */
+                              video.mozRequestFullScreen();
+                          } else if (video.webkitRequestFullscreen) { /* Chrome, Safari y Edge */
+                              video.webkitRequestFullscreen();
+                          } else if (video.msRequestFullscreen) { /* IE/Edge */
+                              video.msRequestFullscreen();
+                          }
+                          } else {
+                          // Si el video está visible, lo oculta y detiene
+                              video.style.display = 'none';
+                              video.pause();
+                          }
+
+             // Detecta el cambio de estado de pantalla completa
+             document.onfullscreenchange = function() {
+                  if (!document.fullscreenElement) {
+                  // Sale del modo de pantalla completa, oculta el video
+                      video.style.display = 'none';
+                      video.pause();
+                   }
+             };
+          }
+              </script>
+
+
+
+   </div>
+
+</body>
+</html>

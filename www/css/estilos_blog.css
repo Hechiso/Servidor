@@ -1,0 +1,255 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-izquierda {
+   text-align: left;
+}
+
+.header-derecha {
+   text-align: right;
+}
+
+/*------------------------------*/
+
+.acerca {
+   
+   background: #666;
+   margin-left: 2%;
+   margin-right: 2%;
+   margin-bottom: 2%;
+   margin-top: 2%;
+   text-align: center;
+   color: #ddd;
+   border-radius: 5px;
+      
+}
+
+.P {
+  text-align: center; 
+  margin: 2%;
+}
+
+.descripcion{
+    margin: 1%;
+    background: #777;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;    
+    color: #ddd;
+}
+
+.descripcion p{
+    margin-left: 2%;
+}
+
+/*------------------------------*/
+
+.Principal {
+    display: flex;
+    text-align: left;
+    flex: 1;
+}
+section {	
+    margin: 1%;	
+    background: #ddd;
+    width: 70%;
+    border-radius: 5px;
+}
+aside {	
+    margin: 1%;	
+    background: #ddd;
+    width: 30%;
+    border-radius: 5px;
+}
+.Principal h2{
+    margin-left: 5px;	
+    color: #444;
+}
+.Principal h1{
+    margin-left: 5px;	
+    text-align: left;
+    color: #444;
+}
+
+/*------------------------------*/
+
+.articulo {
+  flex 1;
+  margin: 1%;
+  margin-left: 0;
+  margin-right: 0;
+  background: #aaa;
+}
+
+.articulo p {
+  margin: 1%;
+}
+
+.articulo h4 {
+  margin-left: 1%;	
+  margin-top: 0;	
+  margin-bottom: 0;
+}
+article{
+   display: flex;
+}
+
+img {
+   width: 300px;
+   height: 100px;
+}
+
+/*------------------------------*/
+
+
+.registro {
+   background: #777;
+   width: 30%;
+   margin: auto;
+   margin-top: 3%;
+   color: #fff;
+   border-radius: 5px;
+}
+
+.registro h2 {
+   margin: 0;
+   text-align: center;
+}
+.registro form{
+   margin: 5%;
+}
+
+.registro input[type="submit"] {
+   display: block;
+   margin: 0 auto;
+   margin-top: 5%;
+}
+
+.boton {
+   
+   background-color: #444;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   cursor: pointer;
+   
+}
+
+.boton #icono {
+   margin-right: 5px;
+}
+
+/*------------------------------*/
+
+.contacto {
+ margin: 1%;
+ background: #aaa;
+ border-radius: 5px;
+}
+
+.contacto p{
+margin: 1%;
+}
+
+.contacto a {
+text-decoration: none;
+color: #fff;
+}
+.contacto button{
+margin: 1%;
+background-color: #444;
+border: none;
+border-radius: 5px;
+}
+
+/*------------------------------*/
+.menuCategorias{
+display: flex;
+flex-direction: column;
+background: #999;
+}
+
+.menuCategorias a{
+text-decoration: none;
+margin-left: 2%;
+color: #333;
+}
+
+/*------------------------------*/
+.introduccion{
+margin: 1%;
+background: #aaa;
+}
+
+.introduccion article{
+display: flex;
+flex-direction: column;
+}
+
+/*------------------------------*/
+
+p {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {	
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilos específicos */
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+}
+
+h3 {
+   text-align: left;
+}

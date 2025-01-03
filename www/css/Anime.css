@@ -1,0 +1,137 @@
+/* estilos pagina anime */
+
+body{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #456;
+}
+
+/*-----------------------  nav  ----------------------------*/
+
+nav{
+  background: #234;
+  height: 50px;
+}
+
+nav p{
+  color: #808b96;
+  margin-left: 20px;
+}
+
+/*------------------------- section ---------------------------*/
+
+section img{
+  border-radius: 10px;
+  width: 1170px;
+  height: 510px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.contenedor{
+  position: relative;	
+  /*display: inline-block;*/
+  overflow: hidden;
+}
+
+.contenedor img{
+  float: left;
+  margin-right: -100%;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contenedor img:first-child{
+  opacity: 1;
+}
+
+.Celular{
+  display: none;
+}
+
+/*---------------------- section mosaico ----------------------*/
+
+h2{
+  margin-top: 50px;	
+  margin-left: 100px;
+  margin-bottom: 0;
+  color: #123;
+}
+
+.mosaico{
+  width: 200px;
+  height: 300px;
+  margin-left: 110px;
+}
+
+.NombreImg{
+  margin-left: 11%;
+  display: inline;
+  color: #123;
+}
+
+.NombreImagen{
+  margin-left: 15%;
+  display: inline;
+  color: #123;
+}
+
+@media screen and (max-width: 981px){
+
+   section{
+      display: none;
+   }
+   
+   nav{
+      display: none;
+   }
+
+   .Celular{
+      display: block;
+      overflow-y: auto;
+   }
+
+   h2{
+      font-size: 34px;
+      background: #123;
+      color: #aaa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+   }
+   
+   .animesMosaico{
+      display: flex;
+      flex-wrap: wrap; 
+   }
+
+   .animesMosaico img{
+      width: cal(16.33% - 19px);
+      border-radius: 5px;
+      margin-left: 80px;  
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   }
+   
+   .animesMosaico a{
+      margin-top: 10%;
+      text-decoration: none;
+      color: #aaa;
+   }
+
+   .animesMosaico p{
+     margin-left: 70px;
+     font-size: 35px;
+     margin-top: 0;
+   }
+
+}
+
+

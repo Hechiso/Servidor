@@ -1,0 +1,351 @@
+/* Estilos CSS */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.celular{
+  display: none;
+}
+
+.cuerpo{
+   background: #ddd;
+   min-height: 100vh;
+   display: flex;
+}
+
+/*----------------------------- Lista de reproduccion --------------------------------*/
+
+.lista{
+   background: #aaa;
+   width: 300px;
+   border-radius: 5px; 
+}
+
+.lista h2{ 
+   width: 300px;
+   margin: 0;
+   background: #888;
+   text-align: center;
+}
+
+.lista ul{
+   list-style: none;
+   background: #aaa;
+   margin: 0;
+   padding: 0;
+   color: #ddd;
+   width: 300px;
+   height: 250px;  
+   border-radius: 15px;
+   overflow: auto;
+}
+
+.lista li{
+  background: #888;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px;
+  height: 250px
+  transition: background-color 0.3s ease;  
+}
+
+.lista li:hover{
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+.lista img{
+width: 300px;
+height: 300px;
+}
+
+/*--------------------------- estilos de portadas ----------------------------------*/
+
+.portadas{
+  display: block;
+  flex-grow: 1;
+  background: #111;
+}
+
+.portadas ul{
+  display: flex;
+  list-style: none; 
+    
+}
+
+.portadas li{
+  background: #111;
+  margin-right: 50px;
+  padding-right: 20px;
+  text-align: center;
+  color:  #abb2b9;
+  
+}
+
+.portadas li:hover{
+  text-decoration: underline;
+  text-decoration-color: #2c3e50;
+  text-decoration-thickness: 4px; /* Ajusta el grosor de la línea */
+}
+
+.portadas .dezplegable{   
+  margin-right: 0px;
+  
+}
+
+.portadas img {
+  width: 250px;
+  height: 170px;
+  margin-left: 70px;
+  margin-top: 50px; 
+  border-radius: 5px;
+  transform: transform 0.3s ease;
+  flex-direction: column;
+  flex: block;
+}
+ 
+.portadas img {
+  -webkit-transition: -webkit-transform 0.3s ease; /* Prefijo para WebKit */
+  transition: transform 0.3s ease; /* Transición estándar */
+}
+
+.portadas img:hover {
+  -webkit-transform: scale(1.1); /* Aumenta la escala de la imagen en WebKit */
+  transform: scale(1.1); /* Aumenta la escala de la imagen */
+}
+
+/*--------------------------- estilos de menu desplegable ----------------------------------*/
+
+
+
+/* Estilos para el menú desplegable */
+.dezplegable {
+    position: relative;
+    display: inline-block;
+}
+
+.botonDezplegable{
+   color: #070;
+}
+
+.contenedorDezplegable {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Coloca el borde derecho del menú alineado con el borde derecho del elemento padre */
+    left: auto; /* Restablece la posición izquierda para asegurar que se alinee desde la derecha */
+}
+
+.contenedorDezplegable a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: #555;
+    
+}
+
+.contenedorDezplegable a:hover {
+    background-color: #f1f1f1;
+}
+
+.dezplegable:hover .contenedorDezplegable {
+    display: block;
+}
+
+ul.menu li.dezplegable {
+    float: right; /* Hace que el último elemento se posicione a la derecha */
+    margin-left: 600px; /* Elimina el margen derecho del último elemento */
+}
+
+ul.menu a{
+text-decoration: none;
+}
+
+/*----------------------------  footer y reproductor ---------------------------------*/
+
+audio {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 15px;
+}
+
+footer img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 50%;
+  left: 0px; /* Ajusta la distancia desde la izquierda del footer */
+  transform: translateY(30%); /* Centra verticalmente la imagen en el footer */
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 6%;
+}
+
+.menuCelular{
+  display: none;
+}
+
+/*---------------------------  media querys  ------------------*/
+
+@media screen and (max-width: 981px){
+
+   .cuerpo{
+     display: none;	   
+     background: #234;
+   }
+
+   footer {
+     display: none;
+   }
+
+
+
+   .celular{
+     display: block;
+     background: #234;
+   }
+  
+   .celular nav{
+     background: #123;
+     display: flex;
+     align-items: center;
+     padding 5px;
+   }
+   
+   #listaReproduccion ul{
+     list-style: none;
+     background: #345;
+     position: absolute;
+     z-index: 999;
+     padding: 0;
+     margin: 10px;
+     width: 25%;
+   }
+   
+   #listaReproduccion li{
+     margin: 10%;
+   }
+ 
+
+
+   #listaReproduccion a{
+     text-decoration: none;
+     color: #012;
+   }
+
+   .listaCelular{
+     list-style: none;   
+   }
+
+   .celular nav img{
+     width: 30px;
+     height: 30px;
+     display: block;
+   }
+   
+   .celular form{
+     display: flex;
+     margin-left: auto;
+   }
+
+   .celular nav .lupita{
+     width: 30px;
+     height: 30px;
+     display: block;  
+   }
+
+/*-------------------- Portadas audio   -----------------------*/
+
+   section{
+     margin: 0;
+     padding: 0;   
+   }
+   
+   #playlist{
+     height: 100vh;
+     list-style: none;
+     margin: 0 auto;
+     padding: 0;
+     overflow-y: auto; 
+   }
+   
+   #playlist li{
+     background: #012;
+     border-radius: 15px;
+     text-align: center;
+     margin: 5px;
+     color: #aaa;
+   }
+
+   section img{
+     margin: 1%;
+     width: 98%;
+     height: 98%;   
+   }
+   
+   article{
+     background: #123;
+     border-radius: 15px;
+     text-align: center;
+     margin-top: 1%;
+   }
+
+   article p{
+     margin: 0;
+     color: #aaa;
+   }
+   
+   .play{
+     width: 12%;
+     height: 10%;
+   }
+   
+   .saltarI{
+     transform: scaleX(-1);
+     width: 12%;
+     height: 10%;
+     margin-left: 25%;
+   }
+
+/*----------------   reproductor  -----------------------*/
+
+   #audioPlayer{
+     display: none;  
+   }
+
+   .rep{
+     display: flex;
+     align-items: center; 
+     background: #123;
+     color: #fff;
+     text-align: center;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+
+   }
+   
+
+}/*fin*/
+
+
+
+

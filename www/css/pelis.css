@@ -1,0 +1,45 @@
+/*    estilos de peliculas     */
+/*
+body{
+  min-height: 100vh;
+  min-width: 100vh;
+  background: #234;
+}
+
+.mosaico{
+  display: flex;
+  justify-content: left;
+  background: #234;  
+}
+
+.mosaico img{
+  display: block;
+  width: 180px;
+  height: 300px;
+  margin-left: 20px;
+}
+
+*/
+/* Estilos de películas */
+body {
+  min-height: 100vh;
+  min-width: 100vh;
+  background: #234;
+  display: flex;
+  justify-content: left;
+  
+}
+
+.mosaico {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px; /* Ancho máximo del mosaico */
+}
+
+.mosaico img {
+  width: calc(16.33% - 19px); /* Ajuste del tamaño de la imagen */
+  height: auto;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
